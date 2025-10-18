@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silent Contrast — Minimal Landing</title>
+  <meta name="description" content="Silent Contrast — a modern minimalist landing: order, silence, confident contrast. Products, Showcase, About, Contact.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0B0B0C">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <script>!function(){try{var s=localStorage.getItem("sc-theme");if(s){document.documentElement.setAttribute("data-theme",s)}else{var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute("data-theme",m?"dark":"light")}}catch(e){}}()</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navbar" aria-label="Primary navigation">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand" aria-label="Silent Contrast">Silent Contrast</a>
+      <nav class="nav-links" aria-label="Main sections">
+        <a href="#products">Products</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Toggle theme">
+          <span class="icon sun" aria-hidden="true"></span>
+          <span class="icon moon" aria-hidden="true"></span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="icon burger" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile menu">
+      <a href="#products">Products</a>
+      <a href="#showcase">Showcase</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="hero" class="section hero">
+      <canvas id="bg-canvas" aria-hidden="true"></canvas>
+      <div class="container hero-inner">
+        <h1>Silent Contrast</h1>
+        <p>Silence. Order. Confidence. Deep flat colors without gradients, minimalism and precise accents.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn accent">Explore</a>
+          <a href="#contact" class="btn ghost">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section products reveal" aria-labelledby="products-title">
+      <div class="container">
+        <h2 id="products-title">Products</h2>
+        <div class="filters" role="group" aria-label="Filter by tags">
+          <button class="chip active" data-tag="all">All</button>
+          <button class="chip" data-tag="work">Work</button>
+          <button class="chip" data-tag="home">Home</button>
+          <button class="chip" data-tag="tech">Tech</button>
+          <button class="chip" data-tag="accessories">Accessories</button>
+        </div>
+        <div class="grid products-grid">
+          <article class="product-card" data-tags="work,tech" data-title="Silent Notebook" data-desc="Smooth graphite cover and crisp paper for focused work.">
+            <div class="product-media" aria-hidden="true"><img src="./pics/notebook.png" alt="Silent Notebook" loading="lazy" decoding="async" width="800" height="600"></div>
+            <div class="product-body">
+              <h3>Silent Notebook</h3>
+              <p>A minimalist notebook for deep focus and clear thoughts.</p>
+              <div class="tagline">
+                <span class="chip small">work</span>
+                <span class="chip small">tech</span>
+              </div>
+              <button class="btn small details-btn">Details</button>
+            </div>
+          </article>
+          <article class="product-card" data-tags="home,tech" data-title="Contrast Lamp" data-desc="Warm diffused light and strict geometry for the desk.">
+            <div class="product-media" aria-hidden="true"><img src="./pics/lamp.png" alt="Contrast Lamp" loading="lazy" decoding="async" width="800" height="600"></div>
+            <div class="product-body">
+              <h3>Contrast Lamp</h3>
+              <p>A desk lamp with a soft warm contrast and confident form.</p>
+              <div class="tagline">
+                <span class="chip small">home</span>
+                <span class="chip small">tech</span>
+              </div>
+              <button class="btn small details-btn">Details</button>
+            </div>
+          </article>
+          <article class="product-card" data-tags="tech,accessories" data-title="Focus Headphones" data-desc="Noise isolation and precise sound to hear only what matters.">
+            <div class="product-media" aria-hidden="true"><img src="./pics/headphones.png" alt="Focus Headphones" loading="lazy" decoding="async" width="800" height="600"></div>
+            <div class="product-body">
+              <h3>Focus Headphones</h3>
+              <p>Headphones for deep immersion without extra noise.</p>
+              <div class="tagline">
+                <span class="chip small">tech</span>
+                <span class="chip small">accessories</span>
+              </div>
+              <button class="btn small details-btn">Details</button>
+            </div>
+          </article>
+          <article class="product-card" data-tags="accessories,work" data-title="Minimal Watch" data-desc="Steel precision and graphite minimalism.">
+            <div class="product-media" aria-hidden="true"><img src="./pics/watch.png" alt="Minimal Watch" loading="lazy" decoding="async" width="800" height="600"></div>
+            <div class="product-body">
+              <h3>Minimal Watch</h3>
+              <p>A watch with a clean dial and confident geometry.</p>
+              <div class="tagline">
+                <span class="chip small">accessories</span>
+                <span class="chip small">work</span>
+              </div>
+              <button class="btn small details-btn">Details</button>
+            </div>
+          </article>
+          <article class="product-card" data-tags="home" data-title="Graphite Backpack" data-desc="Dense fabric, right lines, no unnecessary details.">
+            <div class="product-media" aria-hidden="true"><img src="./pics/backpack.png" alt="Graphite Backpack" loading="lazy" decoding="async" width="800" height="600"></div>
+            <div class="product-body">
+              <h3>Graphite Backpack</h3>
+              <p>A backpack with thoughtful organization and a matte texture.</p>
+              <div class="tagline">
+                <span class="chip small">home</span>
+              </div>
+              <button class="btn small details-btn">Details</button>
+            </div>
+          </article>
+          <article class="product-card" data-tags="tech,accessories" data-title="BluePulse Charger" data-desc="Confident charging with an accent LED.">
+            <div class="product-media" aria-hidden="true"><img src="./pics/charger.png" alt="BluePulse Charger" loading="lazy" decoding="async" width="800" height="600"></div>
+            <div class="product-body">
+              <h3>BluePulse Charger</h3>
+              <p>A compact charger with a clear LED accent.</p>
+              <div class="tagline">
+                <span class="chip small">tech</span>
+                <span class="chip small">accessories</span>
+              </div>
+              <button class="btn small details-btn">Details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="section reveal" aria-labelledby="showcase-title">
+      <div class="container">
+        <h2 id="showcase-title">Showcase</h2>
+        <div class="grid gallery" data-lightbox>
+          <figure>
+            <img src="./pics/notebook.png" width="1200" height="800" loading="lazy" decoding="async" alt="Notebook minimal setup">
+          </figure>
+          <figure>
+            <img src="./pics/lamp.png" width="1200" height="800" loading="lazy" decoding="async" alt="Contrast desk lamp scene">
+          </figure>
+          <figure>
+            <img src="./pics/headphones.png" width="1200" height="800" loading="lazy" decoding="async" alt="Minimal headphones composition">
+          </figure>
+          <figure>
+            <img src="./pics/watch.png" width="1200" height="800" loading="lazy" decoding="async" alt="Minimal watch composition">
+          </figure>
+          <figure>
+            <img src="./pics/backpack.png" width="1200" height="800" loading="lazy" decoding="async" alt="Graphite backpack styling">
+          </figure>
+          <figure>
+            <img src="./pics/charger.png" width="1200" height="800" loading="lazy" decoding="async" alt="BluePulse charger detail">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About</h2>
+        <p class="lead">Silent Contrast removes the unnecessary and leaves form, rhythm, and confidence. No gradients. Only deep colors and precise lines.</p>
+        <div class="grid counters">
+          <div class="counter-box">
+            <div class="counter" data-target="120">0</div>
+            <div class="label">Projects</div>
+          </div>
+          <div class="counter-box">
+            <div class="counter" data-target="48">0</div>
+            <div class="label">Clients</div>
+          </div>
+          <div class="counter-box">
+            <div class="counter" data-target="98" data-suffix="%">0</div>
+            <div class="label">Satisfaction</div>
+          </div>
+          <div class="counter-box">
+            <div class="counter" data-target="24">0</div>
+            <div class="label">Countries</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" id="name" name="name" required minlength="2" autocomplete="name" placeholder="Your name">
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" id="email" name="email" required inputmode="email" autocomplete="email" placeholder="you@example.com">
+            </label>
+          </div>
+          <label class="mt">
+            <span>Message</span>
+            <textarea id="message" name="message" required minlength="10" rows="6" placeholder="Briefly describe your task"></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn accent">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="copy">© <span id="year"></span> Silent Contrast</div>
+      <div class="socials" aria-label="Social links">
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="icon-link">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.1-.76.08-.75.08-.75 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.84 1.32 3.53 1.01.11-.79.42-1.32.76-1.62-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.39 1.24-3.24-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6.01 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.64.24 2.86.12 3.16.77.85 1.23 1.93 1.23 3.24 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.58A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="icon-link">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 7.47v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3Z"/></svg>
+        </a>
+        <a href="https://dribbble.com" target="_blank" rel="noopener" aria-label="Dribbble" class="icon-link">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm6.43 5.09a8.3 8.3 0 0 1 1.69 5.06c-1.02-.2-2.48-.31-4.1-.12-.1-.25-.2-.51-.32-.77-.29-.62-.64-1.23-1.03-1.84 1.67-.68 3.03-1.7 3.76-3.33ZM12 3.68a8.3 8.3 0 0 1 5 1.62c-.62 1.31-1.83 2.25-3.42 2.9A24 24 0 0 0 11 4.03 8.27 8.27 0 0 1 12 3.68Zm-2.3.43c.66.8 1.46 1.96 2.38 3.54-2.3.66-5.26.82-8.64.21A8.35 8.35 0 0 1 9.7 4.1ZM3.67 8.7c3.94.66 7.5.5 10.16-.26.33.55.64 1.12.9 1.71.1.22.2.45.29.67-3.19.96-5.89 3.01-7.61 5.92a8.31 8.31 0 0 1-3.74-8.04ZM12 20.32a8.3 8.3 0 0 1-5-1.62c1.5-2.63 3.96-4.71 7.03-5.55.7 1.77 1.2 3.66 1.47 5.52A8.28 8.28 0 0 1 12 20.32Zm4.13-1.44a24.7 24.7 0 0 0-1.33-5.03c1.3-.16 2.47-.12 3.32 0a8.3 8.3 0 0 1-1.99 5.03Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="detailsModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h3 class="modal-title"></h3>
+      <div class="modal-image"></div>
+      <p class="modal-text"></p>
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-prev" aria-label="Previous">‹</button>
+    <img class="lightbox-img" alt="Image preview">
+    <button class="lightbox-next" aria-label="Next">›</button>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>Please enable JavaScript to use this site.</noscript>
+  <script src="script.js" defer></script>
+</body>
+</html>
